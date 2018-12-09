@@ -8,7 +8,7 @@ class ExamsController < ApplicationController
 
   def result
     @answer = Exam.all.first.answer
-    if params[@answer] then
+    if @answer == params[:select] then
       @msg = '正解'
     else
       @msg = '不正解'
