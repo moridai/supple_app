@@ -7,7 +7,11 @@ class ExamsController < ApplicationController
   end
 
   def result
-    #questionビューで回答された値を@examに代入して@answer_answerと照合してif文で正誤出したい
-    @exam = Exam.all.first
+    @answer = Exam.all.first.answer
+    if params[@answer] then
+      @msg = '正解'
+    else
+      @msg = '不正解'
+    end
   end
 end
