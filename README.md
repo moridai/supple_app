@@ -1,24 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## ビジョン
+学習による成長が実感できて毎日の学習が継続される
 
-Things you may want to cover:
+## KeyResult
+- 勝ち負けの喜びや悔しさがあること
+  - 簡単すぎず難しすぎない問題に取り組めること
+  - 達成感があること(ステージクリア機能)
+  - ユーザー同士で勝ち負けがあること(ランキング、このユーザーと勝負、など)
+- 成長が実感できること
+  - 成績によってグレードが変わること
+  - 何かに突出していたら称号がもらえること
 
-* Ruby version
+## 機能
+- 問題回答機能
+  - 問題出題
+  - 問題回答
+  - 正解表示
+  - 回答結果表示
+  - ステージ設定
+  - 他のユーザーとの勝負機能
+- マイページ機能
+  - 成績閲覧(回答数,正解数etc)
+  - グレード(いちにんまえ)
+  - 称号(〇〇マスター)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## マイルストーン
+- supple_app1.0
+  - 4択の問題が1問出題されて回答したら正答数と答えが表示される。
+- supple_app2.0
+  - 4択の問題が5問出題されて1問回答するごとに答えが表示される。全て回答したら正答数が表示される。
+- supple_app3.0
+  - 自身のアカウントが作成できてマイページを閲覧できる。マイページでは過去の回答数と正答数と正答率が日別に確認できる。
+- supple_app4.0
+  - 自身のグレードが分かるようになる。
