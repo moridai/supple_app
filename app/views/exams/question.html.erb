@@ -1,0 +1,14 @@
+<div class="center">
+  問.&emsp;<%= @exam.question %>
+  </br>
+  </br>
+  <%= form_tag ({ controller: :exams, action: :result}) do %>
+    <%= radio_button_tag 'selects', @exam.firstselect, false %>&nbsp;<%= @exam.firstselect %>&emsp;
+    <%= radio_button_tag 'selects', @exam.secondselect, false %>&nbsp;<%= @exam.secondselect %>&emsp;
+    <%= radio_button_tag 'selects', @exam.thirdselect, false %>&nbsp;<%= @exam.thirdselect %>&emsp;
+    <%= radio_button_tag 'selects', @exam.fourthselect, false %>&nbsp;<%= @exam.fourthselect %>
+    </br>
+    </br>
+    <%= submit_tag '回答する' %>
+  <% end %>
+</div>
