@@ -3,7 +3,7 @@ class ExamsController < ApplicationController
   end
 
   def question
-    @exam = Exam.all.first
+    @exams = Exam.all.order("RANDOM()").limit(2)
   end
 
   def result
