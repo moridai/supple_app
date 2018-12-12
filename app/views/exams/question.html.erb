@@ -1,39 +1,37 @@
 <!-- パターン1 -->
 <!-- <div class="center">
   <% @exams.each do |exam| %>
-    問.&emsp;<%= exam.question %>
-  <% end %>
-  </br>
-  </br>
-  <%= form_tag exams_result_path do %>
-    <% @exams.each.with_index do |exam,i| %>
-      <%= radio_button_tag(:select, exam[:firstselect][i]) %>&nbsp;<%= exam[:firstselect][i] %>&emsp;
-      <%= radio_button_tag(:select, @exams.first.secondselect) %>&nbsp;<%= @exams.first.secondselect %>&emsp;
-      <%= radio_button_tag(:select, @exams.first.thirdselect) %>&nbsp;<%= @exams.first.thirdselect %>&emsp;
-      <%= radio_button_tag(:select, @exams.first.fourthselect) %>&nbsp;<%= @exams.first.fourthselect %>
-    <% end %>
-    </br>
-    </br>
-    <%= submit_tag '回答する' %>
+    <div class="question">
+      <p>問.&emsp;<%= exam[:question] %></p>
+    </div>
+    <div class="selects">
+      <%= form_tag exams_result_path do %>
+        <%= radio_button_tag(:select, exam[:firstselect]) %> <%= exam[:firstselect] %>&emsp;
+      <% end %>
+    </div>
+    <div class="submit_area">
+      <%= submit_tag '回答する' %>
+    </div>
+    <br>
   <% end %>
 </div> -->
 
 <!-- パターン2 -->
 <div class="center">
-  <% @exams.each do |exam| %>
-    </br>
-    </br>
-    問.&emsp;<%= exam[:question] %>
-    </br>
-    </br>
-    <%= form_tag exams_result_path do %>
-      <%= radio_button_tag(:select, exam[:firstselect]) %>&nbsp;<%= exam[:firstselect] %>&emsp;
-      <!-- <%= radio_button_tag(:select, @exams.first.secondselect) %>&nbsp;<%= @exams.first.secondselect %>&emsp;
-      <%= radio_button_tag(:select, @exams.first.thirdselect) %>&nbsp;<%= @exams.first.thirdselect %>&emsp;
-      <%= radio_button_tag(:select, @exams.first.fourthselect) %>&nbsp;<%= @exams.first.fourthselect %> -->
-    <% end %>
-    </br>
-    </br>
-    <%= submit_tag '回答する' %>
-  <% end %>
+    <div class="question">
+      <p>問.&emsp;<%= @exam.question %></p>
+    </div>
+    <div class="selects">
+      <%= form_tag exams_result_path do %>
+        <%= radio_button_tag(:select, @exam.firstselect) %>&nbsp;<%= @exam.firstselect %>&emsp;
+        <%= radio_button_tag(:select, @exam.secondselect) %>&nbsp;<%= @exam.secondselect %>&emsp;
+        <%= radio_button_tag(:select, @exam.thirdselect) %>&nbsp;<%= @exam.thirdselect %>&emsp;
+        <%= radio_button_tag(:select, @exam.fourthselect) %>&nbsp;<%= @exam.fourthselect %>
+        <br>
+        <br>
+        <div class="submit_button">
+          <%= submit_tag '回答する' %>
+        </div>
+      <% end %>
+    </div>
 </div>

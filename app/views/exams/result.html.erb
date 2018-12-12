@@ -2,5 +2,6 @@
   <%= @msg %>
   </br>
   </br>
+  <%= hidden_field_tag(:next_question) %>
   <%= link_to "次の問題へいく", exams_question_path, class: "btn btn-sm btn-warning" %>
 </div>
