@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_16_003745) do
+ActiveRecord::Schema.define(version: 2018_12_16_081953) do
 
   create_table "exams", force: :cascade do |t|
     t.text "question"
@@ -21,12 +21,14 @@ ActiveRecord::Schema.define(version: 2018_12_16_003745) do
     t.string "secondselect"
     t.string "thirdselect"
     t.string "fourthselect"
+    t.integer "correct_answers"
   end
 
   create_table "responses", force: :cascade do |t|
     t.integer "count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "correct_answers"
   end
 
 end

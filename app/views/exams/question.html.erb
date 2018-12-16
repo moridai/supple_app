@@ -3,7 +3,7 @@
     <p>問.&emsp;<%= @exam.question %></p>
   </div>
   <div class="selects">
-    <%= form_tag exams_result_path do %>
+    <%= form_tag exams_answer_path do %>
       <%= radio_button_tag(:select, @exam.firstselect) %>&nbsp;<%= @exam.firstselect %>&emsp;
       <%= radio_button_tag(:select, @exam.secondselect) %>&nbsp;<%= @exam.secondselect %>&emsp;
       <%= radio_button_tag(:select, @exam.thirdselect) %>&nbsp;<%= @exam.thirdselect %>&emsp;

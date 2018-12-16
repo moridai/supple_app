@@ -1,0 +1,24 @@
+<div class="center">
+    <div class="question">
+      <p>問.&emsp;<%= @exam.question %></p>
+    </div>
+    <div class="message">
+      <%= @msg %>
+    </div>
+    <br>
+    <div class="next_question_button">
+      <% if @responsecount <= 4 %>
+        <%= form_tag exams_question_path do %>
+          <%= hidden_field_tag(:next_question) %>
+          <%= hidden_field_tag(:responseid, @responseid) %>
+          <%= hidden_field_tag(:examids, @examids) %>
+          <%= submit_tag '次の問題へ行く' %>
+        <% end %>
+      <% else %>
+        <%= form_tag exams_result_path do %>
+          <%= hidden_field_tag(:responseid, @responseid) %>
+          <%= submit_tag '結果を見る' %>
+        <% end %>
+      <% end %>
+    </div>
+</div>
