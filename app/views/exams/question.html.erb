@@ -1,19 +1,23 @@
 <div class="center">
-    <div class="question">
-      <p>問.&emsp;<%= @exam.question %></p>
-    </div>
-    <div class="selects">
-      <%= form_tag exams_result_path do %>
-        <%= radio_button_tag(:select, @exam.firstselect) %>&nbsp;<%= @exam.firstselect %>&emsp;
-        <%= radio_button_tag(:select, @exam.secondselect) %>&nbsp;<%= @exam.secondselect %>&emsp;
-        <%= radio_button_tag(:select, @exam.thirdselect) %>&nbsp;<%= @exam.thirdselect %>&emsp;
-        <%= radio_button_tag(:select, @exam.fourthselect) %>&nbsp;<%= @exam.fourthselect %>
-        <%= hidden_field_tag(:id, @exam.id) %>
-        <br>
-        <br>
-        <div class="submit_button">
-          <%= submit_tag '回答する' %>
-        </div>
-      <% end %>
-    </div>
+  <div class="question">
+    <p>問.&emsp;<%= @exam.question %></p>
+  </div>
+  <div class="selects">
+    <%= form_tag exams_result_path do %>
+      <%= radio_button_tag(:select, @exam.firstselect) %>&nbsp;<%= @exam.firstselect %>&emsp;
+      <%= radio_button_tag(:select, @exam.secondselect) %>&nbsp;<%= @exam.secondselect %>&emsp;
+      <%= radio_button_tag(:select, @exam.thirdselect) %>&nbsp;<%= @exam.thirdselect %>&emsp;
+      <%= radio_button_tag(:select, @exam.fourthselect) %>&nbsp;<%= @exam.fourthselect %>
+      <%= hidden_field_tag(:examid, @exam.id) %>
+      <br>
+      <br>
+      <div class="submit_button">
+        <%= hidden_field_tag(:responseid, @responseid) %>
+        <%= hidden_field_tag(:examids, @examids) %>
+        <%= hidden_field_tag(:exams, @exams) %>
+        <%= submit_tag '回答する' %>
+      </div>
+    <% end %>
+  </div>
 </div>
+<%= @examids %>
