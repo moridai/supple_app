@@ -5,8 +5,8 @@ class ExamsController < ApplicationController
 
   def question
     if !params[:next_question] then
-      @exams = Exam.all.order("RANDOM()").limit(5)
-      @exam = @exams.first
+      @exams = Exam.order("RANDOM()").limit(5)
+      @exam = @exams[0]
       @examids = @exams.pluck(:id) #取得したレコードのidを配列にする
       response = Response.new
       response.count = 0
