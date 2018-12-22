@@ -1,8 +1,5 @@
 class ExamsController < ApplicationController
-  def home
-  end
-
-
+  
   def question
     if !params[:next_question] then
       @exams = Exam.order("RANDOM()").limit(5)
