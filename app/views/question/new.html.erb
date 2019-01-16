@@ -1,1 +1,29 @@
-新規登録画面です
+<div class="form">
+  <%= form_for @question, :url => {:action => 'create'} do |f| %>
+    <b>問題とその回答を入力してください</b>
+    <br>
+    <%= f.label '問題' %>
+    <%= f.text_field :question %>
+    <br>
+    <%= f.label '回答' %>
+    <%= f.text_field :answer %>
+    <br>
+    <br>
+    <b>選択肢を4つ入力してください</b>
+    <br>
+    <%= f.label '1つ目' %>
+    <%= f.text_field :firstselect %>
+
+    <%= f.label '2つ目' %>
+    <%= f.text_field :secondselect %>
+
+    <%= f.label '3つ目' %>
+    <%= f.text_field :thirdselect %>
+
+    <%= f.label '4つ目' %>
+    <%= f.text_field :fourthselect %>
+    <br>
+    <br>
+    <%= submit_tag '登録する' %>
+  <% end %>
+</div>

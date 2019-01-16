@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get 'exams/result'
   post 'exams/result'
   get 'question/new'
+  post 'question/create'
 end
