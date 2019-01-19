@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   post 'exams/answer'
   get 'exams/result'
   post 'exams/result'
-  get 'question/new'
-  post 'question/create'
+  # get 'question/new'
+  # post 'question/create'
 end

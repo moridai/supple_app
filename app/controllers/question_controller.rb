@@ -1,9 +1,10 @@
-class QuestionController < ApplicationController
-  def new
-  end
-
-  def create
-    @question = Exam.new(params[:question])
-    @question.save
-  end
-end
+# class QuestionController < ApplicationController
+#   def new
+#     @question = Exam.new
+#   end
+#
+#   def create
+#     @question = Exam.new()
+#     @question.save
+#   end
+# end
