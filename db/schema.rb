@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2018_12_16_081953) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "exams", force: :cascade do |t|
     t.text "question"
     t.text "answer"
@@ -25,7 +28,7 @@ ActiveRecord::Schema.define(version: 2018_12_16_081953) do
   end
 
   create_table "responses", force: :cascade do |t|
-    t.integer "count"
+    t.integer "count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "correct_answers"
