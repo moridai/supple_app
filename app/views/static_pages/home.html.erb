@@ -1,9 +1,11 @@
 <div class="center jumbotron">
   <h1>Welcome to the Supple App</h1>
+  <br>
+  <%= form_tag exams_question_path do %>
+    <b>メールアドレス:</b> <%= text_field_tag(:address, '', :size => '35') %>
+    <h3>※入力されたメールアドレスは本製品の機能改善にのみ使用され、メールの送付は一切ありません</h3>
+    <br>
+    <%= submit_tag '問題を始める',class: "btn btn-lg btn-primary" %>
+  <% end %>
 
-  <h2>
-    This is the home page for the Supple App.
-  </h2>
-
-  <%= link_to "問題をはじめる", "/exams/question", class: "btn btn-lg btn-primary" %>
 </div>
